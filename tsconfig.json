@@ -15,6 +15,21 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "baseUrl": "src",
+    "paths": {
+      "@helpers/*": [
+        "app/helpers/*"
+      ],
+      "@models/*": [
+        "app/models/*"
+      ],
+      "@services/*": [
+        "app/services/*"
+      ],
+      "@pipes/*": [
+        "app/pipes/*"
+      ]
+    }
   }
 }

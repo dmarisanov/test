@@ -1,0 +1,9 @@
+@mixin font-roboto($bold: false) {
+  @if $bold==true {
+    font-family: "Roboto Condensed";
+  }
+
+  @else {
+    font-family: "Roboto Condensed Regular";
+  }
+}

@@ -1,0 +1,10 @@
+<div class="container">
+  <h2 class="title">Sign In</h2>
+  <form [formGroup]="registrationForm">
+    <input [placeholder]="login"  formControlName="login" type="text">
+    <span *ngIf="false" class="error-message">Min</span>
+    <input [placeholder]="password" [type]="password" formControlName="password" type="text">
+    <span *ngIf="false" class="error-message">Min 9 char</span>
+  </form>
+  <button (click)="logIn()">Continue</button>
+</div>

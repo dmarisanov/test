@@ -1,0 +1,38 @@
+<div class="container">
+  <form [formGroup]="userForm">
+    <h3>User information</h3>
+    <div>
+      <div class="input-group">
+        <input [placeholder]="'First name'" [ngClass]="{ error: isControlInvalid('firstName') }"
+               formControlName="firstName" type="text">
+        <span class="error-message">{{getControlError('firstName')}}</span>
+      </div>
+      <div class="input-group">
+        <input [placeholder]="'Last name'" [ngClass]="{ error: isControlInvalid('lastName') }" formControlName="lastName"
+               type="text">
+        <span class="error-message">{{getControlError('lastName')}}</span>
+      </div>
+    </div>
+    <div>
+      <div class="input-group">
+        <input [placeholder]="'Email'" [ngClass]="{ error: isControlInvalid('email') }" formControlName="email"
+               type="email">
+        <span class="error-message">{{getControlError('email')}}</span>
+      </div>
+
+      <div class="input-group">
+        <input [placeholder]="'Phone number'" [ngClass]="{ error: isControlInvalid('phone') }" formControlName="phone"
+               type="text">
+        <span class="error-message">{{getControlError('phone')}}</span>
+      </div>
+
+    </div>
+    <div class="btn-box">
+      <button (click)="submitForm()">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
+
+

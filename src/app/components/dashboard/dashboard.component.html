@@ -1,0 +1,12 @@
+<div class="dashboard" #dashBoard>
+  <div>
+    <img src="assets/img/arrow.svg" [ngClass]="{rotate: collapse}" (click)="toggleDashboard(!collapse)">
+  </div>
+  <a *ngFor="let item of dashboard" (click)="onContinue(item.link)" class="item">
+    {{ item.name }}
+  </a>
+</div>
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
+

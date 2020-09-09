@@ -1,0 +1,16 @@
+  <div class="header-box">
+    <div class="container">
+      <div class="logo">
+        <div *ngIf="authService.isAuthenticated | async">
+          {{ userName }}
+        </div>
+      </div>
+      <div>
+        <a *ngFor="let item of menuItems" [routerLink]="[item.link]" >
+            {{ item.name }}
+        </a>
+        <button *ngIf="!(authService.isAuthenticated | async)" (click)="logIn()"> Log IN </button>
+        <button *ngIf="authService.isAuthenticated | async" (click)="logOut()"> Log Out </button>
+      </div>
+    </div>
+  </div>

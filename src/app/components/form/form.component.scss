@@ -1,0 +1,56 @@
+@import "variables";
+
+.container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+  form {
+    div {
+      display: flex;
+      margin: 40px 0 20px;
+
+      input {
+        margin-right: 20px;
+
+        &.error{
+          border: 1px solid $red;
+        }
+      }
+
+      .input-group {
+        margin: 0;
+        position: relative;
+      }
+
+      .error-message {
+        color: $red;
+        font-size: 14px;
+        height: 24px;
+        position: absolute;
+        bottom: -30px;
+      }
+
+      .error .error-message {
+        visibility: visible;
+      }
+
+    }
+    .btn-box {
+      display: flex;
+      justify-content: center;
+
+      button {
+        width: 100%;
+        height: 60px;
+        outline: none;
+        border: none;
+        border-radius: 6px;
+        padding: 15px 20px;
+        font-size: 20px;
+        color: #fff;
+        background: $blue;
+      }
+    }
+  }
+}
